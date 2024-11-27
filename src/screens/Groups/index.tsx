@@ -1,8 +1,10 @@
 import React from "react";
-import { Text } from "react-native";
+import { Container, Title} from "./styles";
 
 export function Group() {
   return (
-    <Text>Group Screen</Text>
+    <Container>
+      <Title>Group Screen</Title>
+    </Container>
   );
 }
