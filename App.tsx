@@ -10,6 +10,7 @@ import {
 import theme from "./src/theme";
 
 import { Loading } from "@components/Loading";
+import { StatusBar } from "react-native";
 
 export default function App() {
 
@@ -17,7 +18,12 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      { !fontsLoaded ? <Group /> : <Loading />}
+      <StatusBar 
+        barStyle={"light-content"}
+        backgroundColor={"transparent"}
+        translucent
+      />
+      { fontsLoaded ? <Group /> : <Loading />}
     </ThemeProvider>
   );
 }
