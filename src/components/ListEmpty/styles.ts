@@ -1,6 +1,5 @@
 
-import { ThemeInterface } from "src/@types/styled";
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
 export const Container = styled.View`
   flex: 1;
@@ -9,9 +8,10 @@ export const Container = styled.View`
 `;
 
 export const Message = styled.Text`
-  text-align: center;
-
-  font-size: ${({theme}: ThemeInterface ) => theme.FONT_SIZE.SM}px;
-  font-family: ${({theme}: ThemeInterface ) => theme.FONT_FAMILY.REGULAR};
-  color: ${({theme}: ThemeInterface ) => theme.COLORS.GRAY_300};
+  ${({ theme }) => css`
+    text-align: center;
+    font-size: ${theme.FONT_SIZE.SM}px;
+    font-family: ${theme.FONT_FAMILY.REGULAR};
+    color: ${theme.COLORS.GRAY_300};
+  `}
 `;
