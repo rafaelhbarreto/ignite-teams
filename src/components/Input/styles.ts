@@ -10,7 +10,6 @@ export const Container = styled(TextInput)`
     color: ${theme.COLORS.WHITE};
     border-radius: 6px; 
     padding: 16px; 
-    margin-bottom: 20px;
     font-family: ${theme.FONT_FAMILY.REGULAR};
     font-size: ${theme.FONT_SIZE.MD}px;
   `}

@@ -20,6 +20,7 @@ export function NewGroup() {
           placeholder="Nome da turma"
         />
         <Button 
+        style={{marginTop: 20}}
           text="Criar"
         />
       </Content>
