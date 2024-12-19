@@ -1,5 +1,5 @@
 import React from "react";
-import { Group } from "@screens/Groups"
+import { Groups } from "@screens/Groups"
 import { NewGroup } from "@screens/NewGroup"
 
 import { ThemeProvider } from "styled-components";

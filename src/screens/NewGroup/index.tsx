@@ -1,6 +1,7 @@
 import { Highlight } from "@components/Highlight";
-import { Container, Icon } from "./styles";
+import { Container, Content, Icon } from "./styles";
 import { Header } from "@components/Header";
+import { Button } from "@components/Button";
 
 export function NewGroup() {
   return (
@@ -8,11 +9,16 @@ export function NewGroup() {
       
       <Header showBackButton/>
 
-      <Icon />
-      <Highlight 
-        title="Nova turma"
-        subtitle="Crie uma nova turma para adicionar as pessoas"
-      />
+      <Content>
+        <Icon />
+        <Highlight 
+          title="Nova turma"
+          subtitle="Crie uma nova turma para adicionar as pessoas"
+        />
+        <Button 
+          text="Criar"
+        />
+      </Content>
     </Container>
   );
 }
