@@ -1,5 +1,7 @@
 import React from "react";
 import { Group } from "@screens/Groups"
+import { NewGroup } from "@screens/NewGroup"
+
 import { ThemeProvider } from "styled-components";
 import { 
   useFonts,  
@@ -23,7 +25,7 @@ export default function App() {
         backgroundColor={"transparent"}
         translucent
       />
-      { fontsLoaded ? <Group /> : <Loading />}
+      { fontsLoaded ? <NewGroup /> : <Loading />}
     </ThemeProvider>
   );
 }
