@@ -16,7 +16,6 @@ export const ButtonContainer = styled.TouchableOpacity<ButtonProps>`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme, type }) => {
-    console.log(type)
     return type === 'PRIMARY' ? theme.COLORS.GREEN_500 : theme.COLORS.RED_DARK
   }};
 `;
