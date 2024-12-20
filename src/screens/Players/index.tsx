@@ -1,17 +1,19 @@
-import { Header } from '@components/Header'
 import { Container, Form, HeaderList, NumberOfPlayers } from './styles'
+import { Header } from '@components/Header'
 import { Highlight } from '@components/Highlight'
 import { ButtonIcon } from '@components/ButtonIcon'
 import { Input } from '@components/Input'
 import { Filter } from '@components/Filter'
 import { PlayerCard } from '@components/PlayerCard'
+import { ListEmpty } from '@components/ListEmpty'
+import { Button } from '@components/Button'
 import { FlatList } from 'react-native'
 import { useState } from 'react'
 
 export function Players() {
 
   const [team, setTeam] = useState('Time A')
-  const [players, setPlayers] = useState<string[]>(['Rafael', 'Henrique', 'Barreto'])
+  const [players, setPlayers] = useState<string[]>([])
 
   return (
     <Container>
@@ -57,9 +59,20 @@ export function Players() {
             onRemove={() => {}}  
           />
         )}
-
+        ListEmptyComponent={() => (
+          <ListEmpty message='Não há jogadores cadastrados' />
+        )}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={[
+          {paddingBottom: 100},
+          players.length === 0 && {flex: 1}
+        ]}
       />
 
+      <Button 
+        text='Remover turma'
+        type='SECONDARY'
+      />
     </Container>
   )
 }
