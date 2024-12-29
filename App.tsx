@@ -8,10 +8,11 @@ import {
 } from "@expo-google-fonts/roboto";
 
 import theme from "./src/theme";
+import { Routes } from "./src/routes";
 
 import { Loading } from "@components/Loading";
 import { StatusBar } from "react-native";
-import { Groups } from "@screens/Groups";
+
 
 export default function App() {
 
@@ -24,7 +25,7 @@ export default function App() {
         backgroundColor={"transparent"}
         translucent
       />
-      { fontsLoaded ? <Groups /> : <Loading />}
+      { fontsLoaded ? <Routes /> : <Loading />}
     </ThemeProvider>
   );
 }
